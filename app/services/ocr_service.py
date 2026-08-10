@@ -160,7 +160,9 @@ def extract_vehicle_number(image: PILImage.Image) -> OCRResult:
         )
     except Exception as exc:
         # Missing binary, timeout, or a Tesseract crash all land here.
-        logger.warning("ocr_failed", extra={"error": str(exc), "type": type(exc).__name__})
+        logger.warning(
+    "ocr_failed", extra={"error": str(exc), "type": type(exc).__name__}, exc_info=True
+)
         return OCRResult(
             engine="tesseract",
             error=f"OCR engine failed: {type(exc).__name__}",
