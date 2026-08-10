@@ -1,0 +1,16 @@
+{
+  "python.terminal.activateEnvironment": true,
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": ["tests"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.analysis.extraPaths": ["app"],
+  "python.analysis.include": ["app", "tests", "scripts", "alembic"],
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.pytest_cache": true,
+    "**/*.pyc": true
+  },
+  "editor.formatOnSave": true,
+  "editor.rulers": [88]
+}
